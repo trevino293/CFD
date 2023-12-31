@@ -138,11 +138,11 @@ The investment threshold value  $Y_{i} =  r_{i} + Q_{i} + z$  is a first instinc
 The economic order quantity or $Q_{i}$  asssets will be removed from long term assets to meet demand when the liquid assets inventory falls below the re-order point $r_{i}$.
 
 \begin{align*}
-	& if \; I_{i} > Y_{i} \;\implies\;	 \Delta_{i|+} = I_{i} - Y_{i}\\
+	& if \; I_{i} > Y_{i} \;\implies\;	 \Delta_{i|+} = I_{i} - Y_{i} - D_{i}\\
 	& if \; I_{i} < 0 \;\implies\; 	 \Delta_{i|-} = |I_{i}|\\ 
 	\\
-	& \text{Net Change} \: = NC_{i}= Q_{i-1} -( \Delta_{i-1|+} + D_{i-1})+\Delta_{i-1|-}\\
-										\implies & I_{i} = I_{I-1} + NC_{i}\\
+	& \text{Net Change} \: = NC_{i}= Q_{i-1} -( \Delta_{i-1|+})+\Delta_{i-1|-}\\
+										\implies & I_{i} = I_{i-1} + NC_{i}\\
 \end{align*}
 
 \subsection{Long Term Assets}
@@ -188,6 +188,7 @@ The following is a sample of questions and data points to initiate the model.
 	\item[$\bullet$ Personal Statement on Income:] "I make 1000 dollars weekly after tax" $\: \implies$ Weekly $A_{i} =  1000 $
 	\item[$\bullet$ Personal Statement on Savings:] "I have 98,000 dollars saved and plan to save 30\% of all paychecks" $\: \implies$ \: $S_{0} =  98000 $
 	\subitem[$\implies \: z =  1000*.3 = 300 $]
+	\item[$\bullet$ Personal Statement on Expected Demand:] "I have 2000 dollar loan that I will pay off in 2 weeks" $\: \implies$ \: $D_{2} =  D_{2} + 2000 $
 \end{description}
 
 \subsubsection{Step 1 - Initiate}
@@ -196,10 +197,10 @@ The following is a sample of questions and data points to initiate the model.
 	\begin{split}
 		I_{0} = 1000 - 1200 -500 + 4200 = 3500\\
 		NC_{0} = 1000 - 1200 - 500 = -700\\
-		weekly h_{i} = (.05/52 weeks)(\$1)(\$3500) = h_{0} = 3.4 \\
+		weekly h_{0} = (.05/52 weeks)(\$1)(\$3500) = h_{0} = 3.4 \\
 		\implies \overline{I_{0}} =  3500 \\
-		\implies D_{i} = |NC_{i}|  = 700 \\
-		\implies \overline{D_{i}} = 700 
+		\implies D_{0} = |NC_{0}|  = 700 \\
+		\implies \overline{D_{0}} = 700 
 	\end{split}
 \end{equation}
 \FloatBarrier
@@ -207,6 +208,7 @@ The following is a sample of questions and data points to initiate the model.
 \begin{equation}
 	\begin{split}
 		Q_{0} =  \sqrt{\frac{2(1000)(700)}{3.4}} = 645\\
+		I_{0} > r_{0} =3500 > 700 \implies Q_{0} = 0\\
 		r_{0} =  \tau\overline{D_{i}} = \overline{D_{i}} = 700\\
 		\implies \tau = \text{1 week of work time to generate paycheck}\\
 		Y_{0} = Q_{0} + r_{0} + z = 645 + 300 + 700 = 1645\\
@@ -223,34 +225,41 @@ The following is a sample of questions and data points to initiate the model.
 		\toprule
 		$i$     & $NC_{i}$     & $D_{i}$ &  $\overline{D_{i}}$ & $I_{i}$ &  $\overline{I_{i}}$ & $I_{i}  - Y_{i} - D_{i} > 0$ & $\Delta_{i}$ & $S_{i}$ & $I_{i} < r_{i}$ & $(Q_{i}, r_{i})$\\
 		\midrule
-		0	& -700	&  700  	& 700  		& 3500	& 3500		& $1155 > 0$		 & -1155		& 98000 	&	No 	& (644, 700) \\
+		0	& -700	&  700  	& 700  		& 3500	& 3500		& $1155 > 0$		 & -1155		& 98000 	&	No 	& (0, 700) \\
 		\bottomrule
 	\end{tabular}
 	\label{tab:table}
 \end{table}
-\FloatBarrier
 
 \subsubsection{Step 2 - First Iteration and Action}
 
 \begin{equation}
 	\begin{split}
-		I_{0} = 1000 - 1200 -500 + 4200 = 3500\\
-		NC_{0} = 1000 - 1200 - 500 = -700\\
-		weekly h_{i} = (.05/52 weeks)(\$1)(\$3500) = h_{0} = 3.4 \\
-		\implies \overline{I_{0}} =  3500 \\
-		\implies D_{i} = |NC_{i}|  = 700 \\
-		\implies \overline{D_{i}} = 700 
+		I_{1} = 3500 - 700 = 2800\\
+		NC_{1} = 1000 - 1155 - 500 = -655\\
+		weekly h_{1} = (.05/52 weeks)(\$1)(\$3150) = h_{1} = 3.0\\
+		\implies \overline{I_{1}} =  3150 \\
+		\implies D_{1} = |NC_{1}|  = 655 \\
+		\implies \overline{D_{1}} = (700+ 655)/2) = 677.5
 	\end{split}
 \end{equation}
 
 \begin{equation}
 	\begin{split}
-		Q_{0} =  \sqrt{\frac{2(1000)(700)}{3.4}} = 645\\
-		r_{0} =  \tau\overline{D_{i}} = \overline{D_{i}} = 700\\
+		Q_{1} =  \sqrt{\frac{2(1000)(677.5)}{3.0}} = 668.9\\
+		I_{1} > r_{1} = 2800 > 677.5 \implies Q_{1} = 0\\
+		r_{1} =  \tau\overline{D_{1}} = \overline{D_{1}} = 677.5\\
 		\implies \tau = \text{1 week of work time to generate paycheck}\\
-		Y_{0} = Q_{0} + r_{0} + z = 645 + 300 + 700 = 1645\\
-		\implies \: 3500 - 1645 - 700 > 0  = True \\
-		\Delta_{0} = -1155
+		Y_{0} = Q_{0} + r_{0} + z = 668.9 + 300 + 677.5 = 1646.4\\
+		\implies \: 2800 - 1646.4 - 655 > 0  = True \\
+		\Delta_{0} = -498.6
+	\end{split}
+\end{equation}
+
+\begin{equation}
+	\begin{split}
+		S_{1} =  S_{0}(1+(i/52)) - Q_{0} - \Delta_{0} \\
+		S_{1} =  98000(1+(.05/52)) - 0 - (-1155) = 99249.25
 	\end{split}
 \end{equation}
 
@@ -261,8 +270,24 @@ The following is a sample of questions and data points to initiate the model.
 		\toprule
 		$i$     & $NC_{i}$     & $D_{i}$ &  $\overline{D_{i}}$ & $I_{i}$ &  $\overline{I_{i}}$ & $I_{i}  - Y_{i} - D_{i} > 0$ & $\Delta_{i}$ & $S_{i}$ & $I_{i} < r_{i}$ & $(Q_{i}, r_{i})$\\
 		\midrule
-		0	& -700	&  700  	& 700  		& 3500	& 3500		& $1155 > 0$		 & -1155		& 98000 	&	No 	& (644, 700) \\
-		1	& -655	&  655 	& 677.5 		&2844.98	& 3172.5		& $1155 > 0$		 & -1155		& 98000 	&	No 	& (644, 700) \\
+		0	& -700	&  700  	& 700  		& 3500	& 3500		& $1155 > 0$		 & -1155		& 98000 	&	No 	& (0, 700) \\
+		1	& -655	&  655 	& 677.5 		& 2800	& 3150		& $498.6 > 0$		 & -498.6		& 99249.25 	&	No 	& (0, 677.5) \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:table}
+\end{table}
+
+\begin{table}
+	\caption{$i = 2,3$ Second and Third Iterations}
+	\centering
+	\begin{tabular}{||c|c|c|c|c|c|c|c|c|c|c||}
+		\toprule
+		$i$     & $NC_{i}$     & $D_{i}$ &  $\overline{D_{i}}$ & $I_{i}$ &  $\overline{I_{i}}$ & $I_{i}  - Y_{i} - D_{i} > 0$ & $\Delta_{i}$ & $S_{i}$ & $I_{i} < r_{i}$ & $(Q_{i}, r_{i})$\\
+		\midrule
+		0	& -700	&  700  	& 700  		& 3500	& 3500		& $1155 > 0$		 & -1155		& 98000 	&	No 	& (0, 700) \\
+		1	& -655	&  655 	& 677.5 		& 2800	& 3150		& $498.6 > 0$		 & -498.6		& 99249.25 	&	No 	& (0, 677.5) \\
+		2	& -1998.6	&  1998.6	& 1117.9 		& 2144.98	& 2815		& $-2180.32 > 0$		 &  0			& 99843.29 	&	No 	& (0, 1117.5) \\
+		3	& 500		&  0		& 838.4		& 146.37	& 2147.8		& $-1893.5  > 0$		 &  0			& 99939.30 	&	Yes 	& (901.1, 838.4) \\
 		\bottomrule
 	\end{tabular}
 	\label{tab:table}
@@ -270,6 +295,16 @@ The following is a sample of questions and data points to initiate the model.
 \FloatBarrier
 
 
+\begin{figure}
+	\centering
+	\includegraphics[width=17cm, height=10cm]{chart}
+	\caption{Example chart with 2000 Loan in period 2}
+	\label{fig:fig2}
+\end{figure}
+\FloatBarrier
+
+\section{Conclusion}
+I believe this model may be beneficial to society in order to better understand and predict personal finance states. This is my first attempt at academic research and exploration I have composed these thoughts for expert peer review. I beleive this work falls under the operations research domain. Application of this model in conjunction with the advancing technologies of deep learning as well as indutry trend toward open banking, with the right team and research I believe this model could be deployed to benefit society.  
 
 \bibliographystyle{unsrtnat}
 %%% \bibliography{references.bib}  %%% Uncomment this line and comment out the ``thebibliography'' section below to use the external .bib file (using bibtex) .
@@ -278,6 +313,8 @@ The following is a sample of questions and data points to initiate the model.
  \begin{thebibliography}{1}
 
  	\bibitem{Askin2019}
+ 	Ronald Askin (2019) \emph{Chapter 6, Inventory Management and the EOQ}, Lecture 5 IEE 461, Arizona State University.
+	\bibitem{Askin2019}
  	Ronald Askin (2019) \emph{Chapter 6, Inventory Management and the EOQ}, Lecture 5 IEE 461, Arizona State University.
 
  \end{thebibliography}

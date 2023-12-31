@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.12.15)  31 DEC 2023 14:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.12.15)  31 DEC 2023 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -430,6 +430,12 @@ LaTeX Warning: Label `tab:table' multiply defined.
 
 LaTeX Warning: Label `tab:table@cref' multiply defined.
 
+
+LaTeX Warning: Label `tab:table' multiply defined.
+
+
+LaTeX Warning: Label `tab:table@cref' multiply defined.
+
 )
 \openout1 = `CFD.aux'.
 
@@ -617,8 +623,31 @@ File: ./images/EOQ Personal Cash Flow Model.png Graphic file (type png)
 Package pdftex.def Info: ./images/EOQ Personal Cash Flow Model.png  used on inp
 ut line 106.
 (pdftex.def)             Requested size: 312.97514pt x 199.1649pt.
-[2 <./images/EOQ Personal Cash Flow Model.png (PNG copy)>] [3] [4] [5] [6]
-(CFD.aux)
+[2 <./images/EOQ Personal Cash Flow Model.png (PNG copy)>] [3] [4]
+Overfull \hbox (37.21014pt too wide) in paragraph at lines 283--294
+ [][] 
+ []
+
+[5]
+<./images/chart.png, id=98, 957.5775pt x 506.89375pt>
+File: ./images/chart.png Graphic file (type png)
+<use ./images/chart.png>
+Package pdftex.def Info: ./images/chart.png  used on input line 300.
+(pdftex.def)             Requested size: 483.69702pt x 284.53148pt.
+
+Overfull \hbox (13.94203pt too wide) in paragraph at lines 300--301
+ [][] 
+ []
+
+[6 <./images/chart.png>] [7
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.Askin201
+9}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.323 \end{document}
+                    ] (CFD.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -627,16 +656,22 @@ L3 programming layer <2023-08-29>
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `CFD.out' has not changed.
-(rerunfilecheck)             Checksum: 742C070FB654AA056AD54FE88FA1F54C;1708.
+
+Package rerunfilecheck Warning: File `CFD.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `CFD.out':
+(rerunfilecheck)             Before: 742C070FB654AA056AD54FE88FA1F54C;1708
+(rerunfilecheck)             After:  FF9153EEAC791E12F689DC9FD6DB62C9;1802.
  )
 (\end occurred when \iftrue on line 36 was incomplete) 
 Here is how much of TeX's memory you used:
- 15071 strings out of 475248
- 252725 string characters out of 5757812
- 1939785 words of memory out of 5000000
- 36197 multiletter control sequences out of 15000+600000
- 613226 words of font info for 165 fonts, out of 8000000 for 9000
+ 15096 strings out of 475248
+ 253087 string characters out of 5757812
+ 1944785 words of memory out of 5000000
+ 36211 multiletter control sequences out of 15000+600000
+ 613486 words of font info for 169 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  79i,17n,93p,1213b,499s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/trevi/AppData/L
@@ -653,9 +688,9 @@ fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/trevi/AppData/Local/Programs
 /MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/trevi/AppData/Local/Program
 s/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/trevi/AppData/Local/Program
 s/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on CFD.pdf (6 pages, 230762 bytes).
+Output written on CFD.pdf (7 pages, 265278 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
- 30 named destinations out of 1000 (max. 500000)
- 54886 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 175 PDF objects out of 1000 (max. 8388607)
+ 35 named destinations out of 1000 (max. 500000)
+ 54891 words of extra memory for PDF output out of 61914 (max. 10000000)
 
