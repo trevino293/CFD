@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.12.15)  28 DEC 2023 22:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.12.15)  31 DEC 2023 14:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -149,6 +149,30 @@ LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 )
+(C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen158
+\Gin@req@width=\dimen159
+)
+(C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/placeins\placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
 (C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks24
@@ -220,7 +244,7 @@ Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count275
 )
-\@linkdim=\dimen158
+\@linkdim=\dimen160
 \Hy@linkcounter=\count276
 \Hy@pagecounter=\count277
 
@@ -253,7 +277,7 @@ Package hyperref Info: Bookmarks ON on input line 4434.
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4772.
-\XeTeXLinkMargin=\dimen159
+\XeTeXLinkMargin=\dimen161
 
 (C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -264,8 +288,8 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
 \Fld@menulength=\count280
-\Field@Width=\dimen160
-\Fld@charsize=\dimen161
+\Field@Width=\dimen162
+\Fld@charsize=\dimen163
 Package hyperref Info: Hyper figures OFF on input line 6051.
 Package hyperref Info: Link nesting OFF on input line 6056.
 Package hyperref Info: Hyper index ON on input line 6059.
@@ -309,23 +333,23 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 (C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen162
-\lightrulewidth=\dimen163
-\cmidrulewidth=\dimen164
-\belowrulesep=\dimen165
-\belowbottomsep=\dimen166
-\aboverulesep=\dimen167
-\abovetopsep=\dimen168
-\cmidrulesep=\dimen169
-\cmidrulekern=\dimen170
-\defaultaddspace=\dimen171
+\heavyrulewidth=\dimen164
+\lightrulewidth=\dimen165
+\cmidrulewidth=\dimen166
+\belowrulesep=\dimen167
+\belowbottomsep=\dimen168
+\aboverulesep=\dimen169
+\abovetopsep=\dimen170
+\cmidrulesep=\dimen171
+\cmidrulekern=\dimen172
+\defaultaddspace=\dimen173
 \@cmidla=\count286
 \@cmidlb=\count287
-\@aboverulesep=\dimen172
-\@belowrulesep=\dimen173
+\@aboverulesep=\dimen174
+\@belowrulesep=\dimen175
 \@thisruleclass=\count288
 \@lastruleclass=\count289
-\@thisrulewidth=\dimen174
+\@thisrulewidth=\dimen176
 )
 (C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/units\nicefrac.sty
 Package: nicefrac 1998/08/04 v0.9b Nice fractions
@@ -346,7 +370,7 @@ LaTeX Info: Redefining \leftprotrusion on input line 1060.
 \MT@prot@toks=\toks27
 LaTeX Info: Redefining \rightprotrusion on input line 1078.
 LaTeX Info: Redefining \textls on input line 1368.
-\MT@outer@kern=\dimen175
+\MT@outer@kern=\dimen177
 LaTeX Info: Redefining \textmicrotypecontext on input line 1988.
 \MT@listname@count=\count291
 
@@ -397,50 +421,36 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \l__lipsum_b_int=\count295
 
 (C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex))
-(C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
-Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-
-(C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
-Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
-
-(C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
-Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-)
-(C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
-fg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: pdftex.def on input line 107.
-
-(C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
-File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
-))
-\Gin@req@height=\dimen176
-\Gin@req@width=\dimen177
-) (C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/doi\doi.sty
+(C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/doi\doi.sty
 Package: doi 2018/09/09 handle doi numbers
+) (CFD.aux
+
+LaTeX Warning: Label `tab:table' multiply defined.
+
+
+LaTeX Warning: Label `tab:table@cref' multiply defined.
+
 )
-(CFD.aux)
 \openout1 = `CFD.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -508,31 +518,7 @@ LaTeX Font Info:    ... okay on input line 71.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 71.
-(CFD.out) (CFD.out)
-\@outlinefile=\write3
-\openout3 = `CFD.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 71.
-Package microtype Info: Applying patch `item' on input line 71.
-Package microtype Info: Applying patch `toc' on input line 71.
-Package microtype Info: Applying patch `eqnum' on input line 71.
-Package microtype Info: Applying patch `footnote' on input line 71.
-Package microtype Info: Applying patch `verbatim' on input line 71.
-Package microtype Info: Generating PDF output.
-Package microtype Info: Character protrusion enabled (level 2).
-Package microtype Info: Using default protrusion set `alltext'.
-Package microtype Info: Automatic font expansion enabled (level 2),
-(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
-Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 71.
-Package microtype Info: No adjustment of tracking.
-Package microtype Info: No adjustment of interword spacing.
-Package microtype Info: No adjustment of character kerning.
-
-(C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-ptm.cfg
-File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
-)
 (C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -558,15 +544,40 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
+Package hyperref Info: Link coloring OFF on input line 74.
+ (CFD.out) (CFD.out)
+\@outlinefile=\write3
+\openout3 = `CFD.out'.
+
+LaTeX Info: Redefining \microtypecontext on input line 74.
+Package microtype Info: Applying patch `item' on input line 74.
+Package microtype Info: Applying patch `toc' on input line 74.
+Package microtype Info: Applying patch `eqnum' on input line 74.
+Package microtype Info: Applying patch `footnote' on input line 74.
+Package microtype Info: Applying patch `verbatim' on input line 74.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+LaTeX Info: Redefining \showhyphens on input line 74.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+
+(C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-ptm.cfg
+File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
+)
 
 LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
-(Font)              using `T1/ptm/m/it' instead on input line 73.
+(Font)              using `T1/ptm/m/it' instead on input line 76.
 
 (C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 76.
 
 
 (C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
@@ -575,7 +586,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 76.
 
 
 (C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -584,41 +595,50 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 91--93
+Underfull \hbox (badness 10000) in paragraph at lines 92--95
 
  []
 
 
-Underfull \vbox (badness 3386) has occurred while \output is active []
+Underfull \vbox (badness 6445) has occurred while \output is active []
 
  [1
 
 
 {C:/Users/trevi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/trev
-i/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] [2] [3]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
-16.
+i/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
-(C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
-[4] [5] (CFD.aux)
+ []
+
+<./images/EOQ Personal Cash Flow Model.png, id=61, 963.6pt x 542.025pt>
+File: ./images/EOQ Personal Cash Flow Model.png Graphic file (type png)
+<use ./images/EOQ Personal Cash Flow Model.png>
+Package pdftex.def Info: ./images/EOQ Personal Cash Flow Model.png  used on inp
+ut line 106.
+(pdftex.def)             Requested size: 312.97514pt x 199.1649pt.
+[2 <./images/EOQ Personal Cash Flow Model.png (PNG copy)>] [3] [4] [5] [6]
+(CFD.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `CFD.out' has not changed.
-(rerunfilecheck)             Checksum: AC2879BCBC40576E5F6A0C831D8297A8;1921.
+(rerunfilecheck)             Checksum: 742C070FB654AA056AD54FE88FA1F54C;1708.
  )
-(\end occurred when \iftrue on line 33 was incomplete) 
+(\end occurred when \iftrue on line 36 was incomplete) 
 Here is how much of TeX's memory you used:
- 15129 strings out of 475248
- 252829 string characters out of 5757812
- 1936785 words of memory out of 5000000
- 36220 multiletter control sequences out of 15000+600000
- 622985 words of font info for 197 fonts, out of 8000000 for 9000
+ 15071 strings out of 475248
+ 252725 string characters out of 5757812
+ 1939785 words of memory out of 5000000
+ 36197 multiletter control sequences out of 15000+600000
+ 613226 words of font info for 165 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,17n,93p,1213b,534s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,17n,93p,1213b,499s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/trevi/AppData/L
 ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/trevi/
 AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Use
@@ -626,17 +646,16 @@ rs/trevi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb
 ><C:/Users/trevi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mmi7.pfb><C:/Users/trevi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmr10.pfb><C:/Users/trevi/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmr5.pfb><C:/Users/trevi/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmr7.pfb><C:/Users/trevi/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/trevi/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/trevi/AppData/Local/P
-rograms/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/trevi/AppData/Local/P
-rograms/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/trevi/AppData/Local/
-Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/trevi/AppData/Local/
-Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on CFD.pdf (5 pages, 174242 bytes).
+ic/amsfonts/cm/cmr7.pfb><C:/Users/trevi/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmsy10.pfb><C:/Users/trevi/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/trevi/AppData/Local/Programs
+/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/trevi/AppData/Local/Programs
+/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/trevi/AppData/Local/Program
+s/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/trevi/AppData/Local/Program
+s/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on CFD.pdf (6 pages, 230762 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
- 29 named destinations out of 1000 (max. 500000)
- 66161 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 161 PDF objects out of 1000 (max. 8388607)
+ 30 named destinations out of 1000 (max. 500000)
+ 54886 words of extra memory for PDF output out of 61914 (max. 10000000)
 

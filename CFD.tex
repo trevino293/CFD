@@ -4,6 +4,9 @@
 
 \usepackage{amsmath, amssymb}
 \usepackage{cite}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{placeins}
 \usepackage[utf8]{inputenc} % allow utf-8 input
 \usepackage[T1]{fontenc}    % use 8-bit T1 fonts
 \usepackage{hyperref}       % hyperlinks
@@ -31,7 +34,7 @@
 \uniqueAffiliationtrue
 
 \ifuniqueAffiliation % Standard variant of author block
-\author{\hspace{1mm}Anthony Trevino\\
+\author{\hspace{1mm}Anthony B. Trevi\~{n}o\\
 	Computer Science Graduate Student, Cloud Technologist\\
 	Georgia Institute of Technology, Ant Finance LLC\\
 	\text{trevino293@gmail.com} \\
@@ -86,25 +89,31 @@ This is my first draft and attempts to apply engineering theory and mathematics 
 
 It is important to understand that this is my first attempt at creating a mathematically valid and acceptable model. Without in depth graduate level or higher qualifications in these subjects my attempt at the model is just that, an attempt. I understand that there will be critique and learning opportunities through development and feedback of this model, I welcome this. I have created this for fun and really couldn't get my mind away from the problem as I embark on my own personal asset management journey. Therefore I tried to write it up for more clarity, reference and validation. I hope to help others by applying this model, automated through a website, generating long term asset estimates and other financial metrics that could provide insight to potential asset positions over time.
 
-Model Development Timeline:
-
-Initial idea and documentation in April 2019.\\
-Refinement for arxiv.org and peer review in December 2023. \\
+\textbf{Model Development Timeline:}\\
+$\bullet$ \; Initial idea and documentation in April 2019.\\
+$\bullet$ \; Refinement for arxiv.org and peer review in December 2023. \\
 
 \section{Introduction}
 
 The objective is to minimize liquid assets inventory whilst comfortably maintaining ability to meet periodic demand. Additionally migrating excess liquid asset inventory gained to long term asset inventory, thus increasing the amount of assets available to gain interest. Significantly increasing  the amount of savings available to gain interest through application of the economic order quantity model to aggregate liquid assets. First define an aggregate estimate of period based cash flows generating net change per period. The provided net change is added to liquid asset balance demand following the inventory demand distribution for this model. This demand distribution will be used to compute the economic order quantity $Q_{i}$ to order and reorder point $r_{i}$ per period. 
 
-Relating $Q_{i}$ and $r_{i}$ to personal asset management, liquid asset balance will be defined as inventory $I_{i}$. Liquid assets encompass credit lines, cash assets or any money that is used frequently and can be readily accessed, will not gain interest.  A 0\% return on investment account is influencing the liquid asset balance per period, an i period will be on the same interval as the sample net change of cash flows. The objective is to minimize inventory, migrating as much assets to long term assets balance $S_{i}$, your future self in the account that will be gaining interest. Long term assets also will have to aggregated to a single amount but in addition tied to an investment return rate $i$. This will be used to model the increase of  long term asset balance over time.
+Relating $Q_{i}$ and $r_{i}$ to personal asset management, liquid asset balance will be defined as inventory $I_{i}$. Liquid assets encompass credit lines, cash assets or any money that is used frequently and can be readily accessed, will not gain interest.  A 0\% return on investment account is influencing the liquid asset balance per period, an $i$ period will be on the same interval as the sample net change of cash flows. The objective is to minimize inventory, migrating as much assets to long term assets balance $S_{i}$, your future self in the account that will be gaining interest. Long term assets also will have to aggregated to a single amount but in addition tied to an investment return rate $i$. This will be used to model the increase of  long term asset balance over time.\\
 
-I notice large places for variation within the model, expecting someone to give an average accurate forecast of all credits and debits per period is unlikely. Even more unlikely is trying to estimate an accurate aggregate investment return percentage with many distributed investment assets. However I believe by asking about the confidence in the ability to adhere to the estimates provided, a confidence interval of demand can be applied to model some of this variation.  
+I notice large places for variation within the model, expecting someone to give an average accurate forecast of all credits and debits per period is unlikely. Similarly trying to estimate an accurate aggregate investment return percentage with many distributed investment assets. However I believe by asking about the confidence in the ability to adhere to the estimates provided, a confidence interval of demand can be applied to model some of this variation.  
 
+\begin{figure}
+	\centering
+	\includegraphics[width=11cm, height=7cm]{EOQ Personal Cash Flow Model}
+	\caption{Overview Architecture}
+	\label{fig:fig1}
+\end{figure}
+\FloatBarrier
 
 \section{Methodology}
-Adapt and apply the economic order quantity model shown in professor Ronald Askin’s IEE 461 \cite{Askin2019} production control course to generate a feasible mathematical model which minimizes aggregate liquid asset balance. An example is shown, the results will be analyzed using methods of statistical process control to gain insight and validate the results of the EOQ application. 
+Adapt and apply the economic order quantity model shown in professor Ronald Askin’s IEE 461 \cite{Askin2019} production control course to generate a feasible mathematical model which minimizes aggregate liquid asset balance and maximize long term assest exposure for gains. 
 
 \subsection{Demand and Net Change}
-Aggregate liquid asset balance per period  $I_{i}$ will be estimated through sampling the net change to a theoretical ‘master checking account’ which can account for all cash flow within the period. Cash will be dispersed through spending, holding and investing money. Dispersion provides the net change per period $NC_{i}$, translating to a demand distribution of:
+Aggregate liquid asset balance per period  $I_{i}$ will be estimated through sampling the net change to a theoretical ‘master checking account’ which can account for all cash flow within the period. Cash will be dispersed through spending, holding and investing money. Dispersion provides the net change per period $NC_{i}$, translating to a demand distribution shown below.
 
 \begin{equation}
 	\begin{split}
@@ -112,8 +121,8 @@ Aggregate liquid asset balance per period  $I_{i}$ will be estimated through sam
 	  	\:\text{else}\; D_{i} = 0
 	\end{split}
 \end{equation}
-
-\subsection{Investments}
+ 
+\subsection{Investment Criterion}
 This distribution is based upon that when cumulative net change within a period is greater than 0 money was gained, therefore there is no impact or demand on the liquid asset balance, only surplus cash. This surplus will be addressed through investing at the end of the period if liquid asset balance surpases the reorder point plus order quantity plus investment amount or $Y_{i}$ the Investment threshold. A defined target investment quantity $z$ will be used to calculate the investment threshold. 
 
 The investment threshold value  $Y_{i} =  r_{i} + Q_{i} + z$  is a first instinct to me as when I would feel comfortable to invest. My inventory or liquid assets would have more than the entire amount to be invested plus one economic order quantity plus the economic reorder point. A substantial buffer of inventory left after the investment is removed. Additionally the actual amount invested will be the current inventory minus the investment threshold, minus demand or $I_{i} - Y_{i} - D_{i}$  I believe this will give strong resistance to changes in demand and allow the inventory to remain positive over time, reducing the exposure to negative assets, debt. 
@@ -132,96 +141,138 @@ The economic order quantity or $Q_{i}$  asssets will be removed from long term a
 	& if \; I_{i} > Y_{i} \;\implies\;	 \Delta_{i|+} = I_{i} - Y_{i}\\
 	& if \; I_{i} < 0 \;\implies\; 	 \Delta_{i|-} = |I_{i}|\\ 
 	\\
-	& \text{Net Change} \: = NC_{i}= Q_{i} -( \Delta_{i-1|+} + D_{i})+\Delta_{i-1|-}\\
+	& \text{Net Change} \: = NC_{i}= Q_{i-1} -( \Delta_{i-1|+} + D_{i-1})+\Delta_{i-1|-}\\
 										\implies & I_{i} = I_{I-1} + NC_{i}\\
 \end{align*}
 
-\subsection{Long Term Assets Distribution}
+\subsection{Long Term Assets}
 Aggregate long term assets per period $S_{i}$ is an estimated value of all long term saving methods. Aggregate investment return $i$ is an estimated average return percentage of all long term saving methods.  This balance will be gaining investments $\Delta_{i|+}$, interest at $i$ and losing economic order quantities $Q_{i}$. The resulting long term assets distribusion is defined by the following. 
 
 \begin{align*}
-	if \; I_{i} > Y_{i} \; \text{and} \: I_{i} - \Delta_{i|+} - D_{i} > 0 	& \implies \;\;\; S_{i} = S_{i}(1+i_{i}) + ( \Delta_{i|+} - D_{i})\\
-	if \; 0 < I_{i} < r_{i} 							& \implies \;\;\; S_{i} = S_{i}(1+i_{i}) - Q_{i}\\
-	if \; I_{i} < 0  								& \implies \;\;\; S_{i} = S_{i}(1+i_{i}) - Q_{i} -  \Delta_{i|-}\\
+	if \; I_{i} > Y_{i} \; \text{and} \: I_{i} - \Delta_{i|+} - D_{i} > 0 	& \implies \;\;\; S_{i} = S_{i-1}(1+i_{i-1}) + ( \Delta_{i-1|+} - D_{i-1})\\
+	if \; 0 < I_{i} < r_{i} 							& \implies \;\;\; S_{i} = S_{i-1}(1+i_{i-1}) - Q_{i-1}\\
+	if \; I_{i} < 0  								& \implies \;\;\; S_{i} = S_{i-1}(1+i_{i-1}) - Q_{i-1} -  \Delta_{i-1|-}\\
 \end{align*}
 
 \section{Example Problem}
-The following section will be an example and explanation of each parameter within the economic order quantity model relating to this application. These are an adaptation of the parameters defined to build the economic order quantity model which were shown in the course applied to inventory management rather than asset flow.
+The following section will be an example and explanation of each parameter within the economic order quantity model relating to this application. These are an adaptation of the parameters defined to build the economic order quantity model which were shown in the course \cite{Askin2019} being applied to inventory management, rather than asset flow.
 
-\subsection{Variable Definiton}
+\subsection{Variable Definiton}  
+
+These formulas were presented during lecture \cite{Askin2019} in the context of warehouse inventory mangement, I attempt to adapt and transform these values for this context. 
 
 \begin{description}
-	\item[$\bullet$ Holding Costs:] $ i \:C\: \overline{I} $
-	\item[$\bullet$ Return:] $ i $ = estimate return on long term assets
-	\item[$\bullet$ Cost per Unit:] C = $1\$ =1 \; Unit $
-	\item[$\bullet$ Average Inventory, Liquid Assets:] $\overline{I} \; \implies \; \overline{I}_{i} = \frac{1}{i}\sum_{i=0}^{i}I_{i}$
-	\item[$\bullet$ Opportunity Cost:] $h_{i} = i \:C\: \overline{I}_{i}$
-	\item[$\bullet$ Setup Cost:]  = $\frac{AD}{Q}$
-	\item[$\bullet$ Income:]  = $A_{i}$ = Approximate cash generated per period
-	\item[$\bullet$ Net Change:]= Sum of all Cash flows in period \;= $NC_{i} =CF_{i}^{+}-CF_{i}^{-}$
-	\item[$\bullet$ Demand:]= Sum of all Cash flows in period \;= $NC_{i} =CF_{i}^{+}-CF_{i}^{-}$
-
+	\item[Holding Costs:] $= h_{i}$ = \; $ i \:C\: \overline{I} $
+	\item[Return:] $ i $ = estimate return on long term assets
+	\item[Cost per Unit:] C = $1\$ =1 \; Unit $
+	\item[Average Inventory, Liquid Assets:] $\overline{I} \; \implies \; \overline{I}_{i} = \frac{1}{i}\sum_{i=0}^{i}I_{i}$
+	\item[Setup Cost:]  = $\frac{AD}{Q}$
+	\item[Income:]  = $A_{i}$ = Approximate cash generated per period
+	\item[Net Change:]= $NC_{i}$ = \; Sum of all Cash flows in period \; $=CF_{i}^{+}-CF_{i}^{-}$
+	\item[Demand:]= $\overline{D}_{i} = \frac{1}{i + 1}\sum_{i=0}^{i-1}|NC_{i}| \implies \; \frac{1}{i + 1}\sum_{i=0}^{i-1}D_{i}$
+	\item[Economic Order Quantity:]= $Q_{i}$
+	\subitem[if $I_{i} < r_{i}$] $\implies\;  Q_{i} = \sqrt{\frac{2A_{i}\overline{D_{i}}}{h_{i}}}$
+	\subitem[if $I_{i} > r_{i}$]$ \implies\;  Q_{i} = 0$
+	\item[Re-Order Point:]= $r_{i} = \tau_{A} \overline{D_{i}}$
+	\item[Lead Time :]= $\tau_{A}$ = Lead time between paychecks or aggregate income flow and transfer time
 \end{description}
 
+\subsection{Example Problem}
+
+The following is a sample of questions and data points to initiate the model. 
+
+\begin{description}
+	\item[$\bullet$ Long Term Asset Return:] $5\% \: \implies i = 5\%$
+	\item[$\bullet$ Personal Statement on Cash/Balance:] "Maintain 4000\$ in checking and 200 cash"
+	\item[$\bullet$ Personal Statement on Spend/Demand:] "Spend roughly 500 dollars a week in daily expenses and have 1200 in monthly costs"
+	\item[$\bullet$ Personal Statement on Income:] "I make 1000 dollars weekly after tax" $\: \implies$ Weekly $A_{i} =  1000 $
+	\item[$\bullet$ Personal Statement on Savings:] "I have 98,000 dollars saved and plan to save 30\% of all paychecks" $\: \implies$ \: $S_{0} =  98000 $
+	\subitem[$\implies \: z =  1000*.3 = 300 $]
+\end{description}
+
+\subsubsection{Step 1 - Initiate}
+
 \begin{equation}
-	\xi _{ij}(t)=P(x_{t}=i,x_{t+1}=j|y,v,w;\theta)= {\frac {\alpha _{i}(t)a^{w_t}_{ij}\beta _{j}(t+1)b^{v_{t+1}}_{j}(y_{t+1})}{\sum _{i=1}^{N} \sum _{j=1}^{N} \alpha _{i}(t)a^{w_t}_{ij}\beta _{j}(t+1)b^{v_{t+1}}_{j}(y_{t+1})}}
+	\begin{split}
+		I_{0} = 1000 - 1200 -500 + 4200 = 3500\\
+		NC_{0} = 1000 - 1200 - 500 = -700\\
+		weekly h_{i} = (.05/52 weeks)(\$1)(\$3500) = h_{0} = 3.4 \\
+		\implies \overline{I_{0}} =  3500 \\
+		\implies D_{i} = |NC_{i}|  = 700 \\
+		\implies \overline{D_{i}} = 700 
+	\end{split}
 \end{equation}
+\FloatBarrier
 
-\subsubsection{Headings: third level}
-\lipsum[6]
-
-\paragraph{Paragraph}
-\lipsum[7]
-
-
-
-\section{Examples of citations, figures, tables, references}
-\label{sec:others}
-
-
-\subsection{Figures}
-\lipsum[10]
-See Figure \ref{fig:fig1}. Here is how you add footnotes. \footnote{Sample of the first footnote.}
-\lipsum[11]
-
-\begin{figure}
-	\centering
-	\fbox{\rule[-.5cm]{4cm}{4cm} \rule[-.5cm]{4cm}{0cm}}
-	\caption{Sample figure caption.}
-	\label{fig:fig1}
-\end{figure}
-
-\subsection{Tables}
-See awesome Table~\ref{tab:table}.
+\begin{equation}
+	\begin{split}
+		Q_{0} =  \sqrt{\frac{2(1000)(700)}{3.4}} = 645\\
+		r_{0} =  \tau\overline{D_{i}} = \overline{D_{i}} = 700\\
+		\implies \tau = \text{1 week of work time to generate paycheck}\\
+		Y_{0} = Q_{0} + r_{0} + z = 645 + 300 + 700 = 1645\\
+		\implies \: 3500 - 1645 - 700 > 0  = True \\
+		\Delta_{0} = -1155
+	\end{split}
+\end{equation}
+\FloatBarrier
 
 \begin{table}
-	\caption{Sample table title}
+	\caption{$i = 0$ Initiate Model}
 	\centering
-	\begin{tabular}{lll}
+	\begin{tabular}{||c|c|c|c|c|c|c|c|c|c|c||}
 		\toprule
-		\multicolumn{2}{c}{Part}                   \\
-		\cmidrule(r){1-2}
-		Name     & Description     & Size ($\mu$m) \\
+		$i$     & $NC_{i}$     & $D_{i}$ &  $\overline{D_{i}}$ & $I_{i}$ &  $\overline{I_{i}}$ & $I_{i}  - Y_{i} - D_{i} > 0$ & $\Delta_{i}$ & $S_{i}$ & $I_{i} < r_{i}$ & $(Q_{i}, r_{i})$\\
 		\midrule
-		Dendrite & Input terminal  & $\sim$100     \\
-		Axon     & Output terminal & $\sim$10      \\
-		Soma     & Cell body       & up to $10^6$  \\
+		0	& -700	&  700  	& 700  		& 3500	& 3500		& $1155 > 0$		 & -1155		& 98000 	&	No 	& (644, 700) \\
 		\bottomrule
 	\end{tabular}
 	\label{tab:table}
 \end{table}
+\FloatBarrier
 
-\subsection{Lists}
-\begin{itemize}
-	\item Lorem ipsum dolor sit amet
-	\item consectetur adipiscing elit.
-	\item Aliquam dignissim blandit est, in dictum tortor gravida eget. In ac rutrum magna.
-\end{itemize}
+\subsubsection{Step 2 - First Iteration and Action}
+
+\begin{equation}
+	\begin{split}
+		I_{0} = 1000 - 1200 -500 + 4200 = 3500\\
+		NC_{0} = 1000 - 1200 - 500 = -700\\
+		weekly h_{i} = (.05/52 weeks)(\$1)(\$3500) = h_{0} = 3.4 \\
+		\implies \overline{I_{0}} =  3500 \\
+		\implies D_{i} = |NC_{i}|  = 700 \\
+		\implies \overline{D_{i}} = 700 
+	\end{split}
+\end{equation}
+
+\begin{equation}
+	\begin{split}
+		Q_{0} =  \sqrt{\frac{2(1000)(700)}{3.4}} = 645\\
+		r_{0} =  \tau\overline{D_{i}} = \overline{D_{i}} = 700\\
+		\implies \tau = \text{1 week of work time to generate paycheck}\\
+		Y_{0} = Q_{0} + r_{0} + z = 645 + 300 + 700 = 1645\\
+		\implies \: 3500 - 1645 - 700 > 0  = True \\
+		\Delta_{0} = -1155
+	\end{split}
+\end{equation}
+
+\begin{table}
+	\caption{$i = 1$ First Iteration}
+	\centering
+	\begin{tabular}{||c|c|c|c|c|c|c|c|c|c|c||}
+		\toprule
+		$i$     & $NC_{i}$     & $D_{i}$ &  $\overline{D_{i}}$ & $I_{i}$ &  $\overline{I_{i}}$ & $I_{i}  - Y_{i} - D_{i} > 0$ & $\Delta_{i}$ & $S_{i}$ & $I_{i} < r_{i}$ & $(Q_{i}, r_{i})$\\
+		\midrule
+		0	& -700	&  700  	& 700  		& 3500	& 3500		& $1155 > 0$		 & -1155		& 98000 	&	No 	& (644, 700) \\
+		1	& -655	&  655 	& 677.5 		&2844.98	& 3172.5		& $1155 > 0$		 & -1155		& 98000 	&	No 	& (644, 700) \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:table}
+\end{table}
+\FloatBarrier
+
 
 
 \bibliographystyle{unsrtnat}
 %%% \bibliography{references.bib}  %%% Uncomment this line and comment out the ``thebibliography'' section below to use the external .bib file (using bibtex) .
-
 
 %%% Uncomment this section and comment out the \bibliography{references} line above to use inline references.
  \begin{thebibliography}{1}
