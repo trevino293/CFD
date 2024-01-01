@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.12.15)  31 DEC 2023 16:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.12.15)  1 JAN 2024 12:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -601,53 +601,57 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 92--95
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 8
+1.
+
+(C:\Users\trevi\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 81.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--97
 
  []
 
-
-Underfull \vbox (badness 6445) has occurred while \output is active []
-
- [1
+[1
 
 
 {C:/Users/trevi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/trev
 i/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
 
-<./images/EOQ Personal Cash Flow Model.png, id=61, 963.6pt x 542.025pt>
+<./images/EOQ Personal Cash Flow Model.png, id=67, 963.6pt x 542.025pt>
 File: ./images/EOQ Personal Cash Flow Model.png Graphic file (type png)
 <use ./images/EOQ Personal Cash Flow Model.png>
 Package pdftex.def Info: ./images/EOQ Personal Cash Flow Model.png  used on inp
-ut line 106.
+ut line 108.
 (pdftex.def)             Requested size: 312.97514pt x 199.1649pt.
 [2 <./images/EOQ Personal Cash Flow Model.png (PNG copy)>] [3] [4]
-Overfull \hbox (37.21014pt too wide) in paragraph at lines 283--294
+Overfull \hbox (37.21014pt too wide) in paragraph at lines 290--301
  [][] 
  []
 
 [5]
-<./images/chart.png, id=98, 957.5775pt x 506.89375pt>
+<./images/chart.png, id=106, 957.5775pt x 506.89375pt>
 File: ./images/chart.png Graphic file (type png)
 <use ./images/chart.png>
-Package pdftex.def Info: ./images/chart.png  used on input line 300.
+Package pdftex.def Info: ./images/chart.png  used on input line 307.
 (pdftex.def)             Requested size: 483.69702pt x 284.53148pt.
 
-Overfull \hbox (13.94203pt too wide) in paragraph at lines 300--301
+Overfull \hbox (13.94203pt too wide) in paragraph at lines 307--308
  [][] 
  []
 
 [6 <./images/chart.png>] [7
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{cite.Askin201
-9}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.323 \end{document}
-                    ] (CFD.aux)
+] (CFD.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -656,41 +660,36 @@ L3 programming layer <2023-08-29>
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `CFD.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `CFD.out':
-(rerunfilecheck)             Before: 742C070FB654AA056AD54FE88FA1F54C;1708
-(rerunfilecheck)             After:  FF9153EEAC791E12F689DC9FD6DB62C9;1802.
+Package rerunfilecheck Info: File `CFD.out' has not changed.
+(rerunfilecheck)             Checksum: FF9153EEAC791E12F689DC9FD6DB62C9;1802.
  )
 (\end occurred when \iftrue on line 36 was incomplete) 
 Here is how much of TeX's memory you used:
- 15096 strings out of 475248
- 253087 string characters out of 5757812
- 1944785 words of memory out of 5000000
- 36211 multiletter control sequences out of 15000+600000
- 613486 words of font info for 169 fonts, out of 8000000 for 9000
+ 15134 strings out of 475248
+ 254034 string characters out of 5757812
+ 1945785 words of memory out of 5000000
+ 36240 multiletter control sequences out of 15000+600000
+ 614027 words of font info for 173 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,17n,93p,1213b,499s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/trevi/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/trevi/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Use
-rs/trevi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb
-><C:/Users/trevi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mmi7.pfb><C:/Users/trevi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb><C:/Users/trevi/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmr7.pfb><C:/Users/trevi/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmsy10.pfb><C:/Users/trevi/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/trevi/AppData/Local/Programs
-/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/trevi/AppData/Local/Programs
-/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/trevi/AppData/Local/Program
-s/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/trevi/AppData/Local/Program
-s/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on CFD.pdf (7 pages, 265278 bytes).
+ 79i,17n,93p,1272b,499s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\trevi\AppData\
+Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/trevi/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/
+trevi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+C:/Users/trevi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmm
+i5.pfb><C:/Users/trevi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmmi7.pfb><C:/Users/trevi/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmr10.pfb><C:/Users/trevi/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmr7.pfb><C:/Users/trevi/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/trevi/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/trevi/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/trevi/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/trevi/AppData/Local/P
+rograms/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/trevi/AppData/Local/P
+rograms/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on CFD.pdf (7 pages, 284405 bytes).
 PDF statistics:
- 175 PDF objects out of 1000 (max. 8388607)
- 35 named destinations out of 1000 (max. 500000)
- 54891 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 234 PDF objects out of 1000 (max. 8388607)
+ 36 named destinations out of 1000 (max. 500000)
+ 55411 words of extra memory for PDF output out of 61914 (max. 10000000)
 

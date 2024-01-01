@@ -76,13 +76,15 @@ pdfkeywords={Economic Order Quantity, Personal Finance, Asset Management, Invent
 
 \begin{abstract}
 
-This paper defines a cash flow dispersion model that minimizes liquid assets inventory whilist comfortably maintaining the ability to meet periodic demand. Migrating excess liquid asset inventory gained to long term asset inventory, thus increasing the amount of assets available to gain interest. Cumulative average estimates are used to account for variation in investment returns and cash flow habits. The resulting aggregate estimates of cash flows, liquid assets, long term assets and long term assets return percentage will be used to determine economic reorder point and order quantity. Dollars which can be considered equal to inventory will be migrated between long term and liquid asset balances based upon the economic order quantity model and policy and intuitive investment threshold. This model can be used to understand a target cash flow state, providing target account values, triggers, order quantity kickstarting progression toward confident cash flow forecasting for an individual or corporation. With the expansion of deep learning algorithms and open banking, the ability to predict and measure performance against this model may be attainable in future study. 
+This paper defines a cash flow dispersion model that minimizes liquid assets inventory whilist comfortably maintaining the ability to meet periodic demand. Migrating excess liquid asset inventory gained to long term asset inventory, thus increasing the amount of assets available to gain interest. Cumulative average estimates are used to account for variation in investment returns and cash flow habits. The resulting aggregate estimates of cash flows, liquid assets, long term assets and long term assets return percentage will be used to determine economic reorder point and order quantity. Dollars which can be considered equal to inventory will be migrated between long term and liquid asset balances based upon the economic order quantity and an intuitive investment threshold. This model can be used to understand a target cash flow state, providing target account values, triggers, order quantity kickstarting progression toward confident cash flow forecasting for an individual or corporation. With the expansion of deep learning algorithms and open banking, the ability to predict and measure performance against this model may be attainable in future study. 
+
+\textbf{Github: \url{https://github.com/trevino293/CFD/tree/main}}
 
 \end{abstract}
 
 
 % keywords can be removed
-\keywords{Economic Order Quantity \and Personal Finance \and Asset Management, Inventory Management}
+\keywords{Economic Order Quantity \and Personal Finance \and Asset Management \and Inventory Management \and Cash Flow Dispersion Model}
 
 \section{Preface}
 This is my first draft and attempts to apply engineering theory and mathematics to solve a complex problem. The problem statement is defined as running out of funds in the final stages of life due to poor planning and optimization of assets. I once read a statistic stating that the median of Americans aggregate savings is \$570 and on average \$33,000. Whether these numbers are accurate or not is beside the problem, the range that they are in is not near an acceptable level for long term feasibility.
@@ -95,11 +97,11 @@ $\bullet$ \; Refinement for arxiv.org and peer review in December 2023. \\
 
 \section{Introduction}
 
-The objective is to minimize liquid assets inventory whilst comfortably maintaining ability to meet periodic demand. Additionally migrating excess liquid asset inventory gained to long term asset inventory, thus increasing the amount of assets available to gain interest. Significantly increasing  the amount of savings available to gain interest through application of the economic order quantity model to aggregate liquid assets. First define an aggregate estimate of period based cash flows generating net change per period. The provided net change is added to liquid asset balance demand following the inventory demand distribution for this model. This demand distribution will be used to compute the economic order quantity $Q_{i}$ to order and reorder point $r_{i}$ per period. 
+The objective is to minimize liquid assets inventory whilst comfortably maintaining ability to meet periodic demand. Additionally migrating excess liquid asset inventory gained to long term asset inventory, thus increasing the amount of assets available to gain interest. Significantly increasing  the amount of savings available to gain interest through application of the economic order quantity model to aggregate liquid assets. First define an aggregate estimate of period based cash flows generating net change per period. The net change is applied to the liquid asset balance following the inventory demand distribution. This demand distribution will be used to compute the economic order quantity $Q_{i}$ to order and reorder point $r_{i}$ per period. 
 
-Relating $Q_{i}$ and $r_{i}$ to personal asset management, liquid asset balance will be defined as inventory $I_{i}$. Liquid assets encompass credit lines, cash assets or any money that is used frequently and can be readily accessed, will not gain interest.  A 0\% return on investment account is influencing the liquid asset balance per period, an $i$ period will be on the same interval as the sample net change of cash flows. The objective is to minimize inventory, migrating as much assets to long term assets balance $S_{i}$, your future self in the account that will be gaining interest. Long term assets also will have to aggregated to a single amount but in addition tied to an investment return rate $i$. This will be used to model the increase of  long term asset balance over time.\\
+Relating $Q_{i}$ and $r_{i}$ to personal asset management, liquid asset balance will be defined as inventory $I_{i}$. Liquid assets encompass cash assets or any money that is used frequently and can be readily accessed, usually will not gain interest.  A 0\% return on investment account is influencing the liquid asset balance per period, an $i$ period will be on the same interval as the sample net change of cash flows. The objective is to minimize inventory, migrating as much assets to long term assets balance $S_{i}$, your future self in the account that will be gaining interest. Long term assets also will have to aggregated to a single amount but in addition tied to an investment return rate $i$. This will be used to model the increase of long term asset balance over time.\\
 
-I notice large places for variation within the model, expecting someone to give an average accurate forecast of all credits and debits per period is unlikely. Similarly trying to estimate an accurate aggregate investment return percentage with many distributed investment assets. However I believe by asking about the confidence in the ability to adhere to the estimates provided, a confidence interval of demand can be applied to model some of this variation.  
+I notice large places for variation within the model, expecting someone to provide accurate forecast inclusive of all credits and debits per period is unlikely. Similarly trying to estimate an accurate aggregate investment return percentage with many distributed investment assets. However I believe by asking about the confidence in the ability to adhere to the estimates provided, a confidence interval of demand can be applied to model some of this variation.  
 
 \begin{figure}
 	\centering
@@ -110,7 +112,7 @@ I notice large places for variation within the model, expecting someone to give 
 \FloatBarrier
 
 \section{Methodology}
-Adapt and apply the economic order quantity model shown in professor Ronald Askin’s IEE 461 \cite{Askin2019} production control course to generate a feasible mathematical model which minimizes aggregate liquid asset balance and maximize long term assest exposure for gains. 
+Adapt and apply the economic order quantity model shown in professor Ronald Askin’s IEE 461 \cite{Askin2019} production control course to generate a feasible mathematical model which minimizes aggregate liquid asset balance and maximize long term assest exposure to gains. 
 
 \subsection{Demand and Net Change}
 Aggregate liquid asset balance per period  $I_{i}$ will be estimated through sampling the net change to a theoretical ‘master checking account’ which can account for all cash flow within the period. Cash will be dispersed through spending, holding and investing money. Dispersion provides the net change per period $NC_{i}$, translating to a demand distribution shown below.
@@ -138,20 +140,20 @@ The investment threshold value  $Y_{i} =  r_{i} + Q_{i} + z$  is a first instinc
 The economic order quantity or $Q_{i}$  asssets will be removed from long term assets to meet demand when the liquid assets inventory falls below the re-order point $r_{i}$.
 
 \begin{align*}
-	& if \; I_{i} > Y_{i} \;\implies\;	 \Delta_{i|+} = I_{i} - Y_{i} - D_{i}\\
-	& if \; I_{i} < 0 \;\implies\; 	 \Delta_{i|-} = |I_{i}|\\ 
+	& if \; I_{i} > Y_{i} \;\implies\;	 \Delta_{i} = I_{i} - Y_{i} - D_{i}\\
+	& if \; I_{i} < 0 \;\implies\; 	 \Delta_{i} = I_{i}\\ 
 	\\
-	& \text{Net Change} \: = NC_{i}= Q_{i-1} -( \Delta_{i-1|+})+\Delta_{i-1|-}\\
+	& \text{Net Change} \: = NC_{i}= Q_{i-1} - \Delta_{i-1}\\
 										\implies & I_{i} = I_{i-1} + NC_{i}\\
 \end{align*}
 
 \subsection{Long Term Assets}
-Aggregate long term assets per period $S_{i}$ is an estimated value of all long term saving methods. Aggregate investment return $i$ is an estimated average return percentage of all long term saving methods.  This balance will be gaining investments $\Delta_{i|+}$, interest at $i$ and losing economic order quantities $Q_{i}$. The resulting long term assets distribusion is defined by the following. 
+Aggregate long term assets per period $S_{i}$ is an estimated value of all long term saving methods. Aggregate investment return $i$ is an estimated average return percentage of all long term saving methods.  This balance will be gaining investments $\Delta_{i}$, interest at $i$ and losing economic order quantities $Q_{i}$. The resulting long term assets distribusion is defined by the following. 
 
 \begin{align*}
-	if \; I_{i} > Y_{i} \; \text{and} \: I_{i} - \Delta_{i|+} - D_{i} > 0 	& \implies \;\;\; S_{i} = S_{i-1}(1+i_{i-1}) + ( \Delta_{i-1|+} - D_{i-1})\\
+	if \; I_{i} > Y_{i} \; \text{and} \: I_{i} - \Delta_{i|+} - D_{i} > 0 	& \implies \;\;\; S_{i} = S_{i-1}(1+i_{i-1}) + ( \Delta_{i-1})\\
 	if \; 0 < I_{i} < r_{i} 							& \implies \;\;\; S_{i} = S_{i-1}(1+i_{i-1}) - Q_{i-1}\\
-	if \; I_{i} < 0  								& \implies \;\;\; S_{i} = S_{i-1}(1+i_{i-1}) - Q_{i-1} -  \Delta_{i-1|-}\\
+	if \; I_{i} < 0  								& \implies \;\;\; S_{i} = S_{i-1}(1+i_{i-1}) - Q_{i-1} +  \Delta_{i-1}\\
 \end{align*}
 
 \section{Example Problem}
@@ -178,6 +180,11 @@ These formulas were presented during lecture \cite{Askin2019} in the context of 
 \end{description}
 
 \subsection{Example Problem}
+
+\begin{flushleft}
+\textbf{Google Sheets Example Problem}
+ \url{https://docs.google.com/spreadsheets/d/19UFwlwobvhcvf8LA1VnPy0XWBtuGiWFGkX-fbACpsl4/edit?usp=sharing}
+\end{flushleft}
 
 The following is a sample of questions and data points to initiate the model. 
 
@@ -303,8 +310,11 @@ The following is a sample of questions and data points to initiate the model.
 \end{figure}
 \FloatBarrier
 
+In this example we can begin to see the models impact on long term and liquid assets balance. Initially the expected demand and current assets indicated a need to invest which was done in period  zero and one with 1155 and 498 dollar investments to long term assets. However a unusually high demand is required in period two, causing the balance to sink below the re-order point triggering two economic order quantity orders from the long term assets in periods three and four. When modeled for the remainder of the year with static demand and income no more orders are incurred. Indicating a positive net balance of demand and income, providing the ability to save in each period. Without proper understanding of budget and income this model may not be useful. 
+
 \section{Conclusion}
-I believe this model may be beneficial to society in order to better understand and predict personal finance states. This is my first attempt at academic research and exploration I have composed these thoughts for expert peer review. I beleive this work falls under the operations research domain. Application of this model in conjunction with the advancing technologies of deep learning as well as indutry trend toward open banking, with the right team and research I believe this model could be deployed to benefit society.  
+I believe this model may be beneficial to society, helping others to understand and predict an accurate estimate of financial state optimized for exposure to gains. This is my first attempt at academic research and exploration I have composed these thoughts for more qualified expert peer review. I feel this work falls under the operations research domain as an extension of the Economic Order Quantity \cite{Askin2019}, but also believe future exploration may be in the economics, asset management and computer science domains. Application of this model in conjunction with the advancing technologies of deep learning as well as indutry trend toward open banking, with the right team and research I believe this model could be deployed and readily accesible. Providing mathematically backed investment and re-order points along with order quantity and investment amounts will be powerful. The challenge is in accurate prediciton of demand which will be reliant upon the model developer or user input untill all cash flows can be accounted for which will be impossible to predict. I will continue to explore this model with different payment periods, cashflow and random demand distribution based upon confidence in historic average demand.
+Thank you for taking the time to review my work! 
 
 \bibliographystyle{unsrtnat}
 %%% \bibliography{references.bib}  %%% Uncomment this line and comment out the ``thebibliography'' section below to use the external .bib file (using bibtex) .
@@ -314,8 +324,8 @@ I believe this model may be beneficial to society in order to better understand 
 
  	\bibitem{Askin2019}
  	Ronald Askin (2019) \emph{Chapter 6, Inventory Management and the EOQ}, Lecture 5 IEE 461, Arizona State University.
-	\bibitem{Askin2019}
- 	Ronald Askin (2019) \emph{Chapter 6, Inventory Management and the EOQ}, Lecture 5 IEE 461, Arizona State University.
+	\bibitem{Kour2018}
+ 	George Kour (2018) \emph{arxiv-style GitHub}, Github Template, https://github.com/kourgeorge/arxiv-style/tree/master.
 
  \end{thebibliography}
 
